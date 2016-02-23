@@ -1,0 +1,123 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.com.naja</groupId>
+  <artifactId>naja</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  <properties>
+	<jdk.version>1.8</jdk.version>
+	
+	<!-- jsf -->
+	<jsf-impl.version>2.2.12</jsf-impl.version>
+	<jsf-api.version>2.2.12</jsf-api.version>
+	
+	<!-- javax-servlet -->
+	<servlet.version>3.1.0</servlet.version>
+	
+	<!-- javax-inject -->
+	<inject.version>1</inject.version>
+
+	<!-- utilidades -->
+	<commons-lang3.version>3.4</commons-lang3.version>
+	
+	<!-- hibernate -->
+	<hibernate.version>5.0.2.Final</hibernate.version>	
+	<hibernate-commons-annotations.version>3.2.0.Final</hibernate-commons-annotations.version>
+	
+	<!-- postgresql -->
+	<postgresql.version>9.1-901-1.jdbc4</postgresql.version>
+	
+  </properties>	
+  
+  <dependencies>
+
+	<!-- jsf -->
+	<dependency>
+		<groupId>com.sun.faces</groupId>
+		<artifactId>jsf-impl</artifactId>
+		<version>${jsf-impl.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>com.sun.faces</groupId>
+		<artifactId>jsf-api</artifactId>
+		<version>${jsf-api.version}</version>
+	</dependency>
+	
+	<!-- javax-servlet -->
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>${servlet.version}</version>
+    </dependency>	
+
+    <!-- hibernate -->
+    <dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>${hibernate.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-entitymanager</artifactId>
+		<version>${hibernate.version}</version>
+
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-validator</artifactId>
+		<version>${hibernate.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-commons-annotations</artifactId>
+		<version>${hibernate-commons-annotations.version}</version>
+	</dependency>
+	
+	<!-- postgresql -->		
+	<dependency>
+		<groupId>postgresql</groupId>
+		<artifactId>postgresql</artifactId>
+		<version>${postgresql.version}</version>
+	</dependency>
+	
+	<!-- utilidades -->
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-lang3</artifactId>
+		<version>${commons-lang3.version}</version>
+	</dependency>
+	
+	<!-- javax-inject -->
+	<dependency>
+		<groupId>javax.inject</groupId>
+		<artifactId>javax.inject</artifactId>
+		<version>${inject.version}</version>
+	</dependency>
+				
+  </dependencies>		
+  
+  <build>
+    <finalName>OficinaSocial</finalName>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.3</version>
+			<configuration>
+				<source>${jdk.version}</source>
+				<target>${jdk.version}</target>
+			</configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <warSourceDirectory>WebContent</warSourceDirectory>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+		  <filename>${project.build.finalName}.war</filename>          
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
