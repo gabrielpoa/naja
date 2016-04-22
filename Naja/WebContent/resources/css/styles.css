@@ -181,7 +181,7 @@ a img{
   height: 800px;
   width: auto;
   background-color: #f3f3f3;
-  background: url("/OficinaSocial/javax.faces.resource/slide01.jpg.xhtml?ln=img") center 30% no-repeat;
+  background: url("/Naja/javax.faces.resource/slide01.jpg.xhtml?ln=img") center 30% no-repeat;
   background-size: cover;
 }
 
@@ -308,7 +308,7 @@ a img{
 
 .android-wear-section {
   position: relative;
-  background: url("/OficinaSocial/javax.faces.resource/wear.png.xhtml?ln=img") center top no-repeat;
+  background: url("/Naja/javax.faces.resource/wear.png.xhtml?ln=img") center top no-repeat;
   background-size: cover;
   height: 800px;
 }
@@ -378,7 +378,7 @@ a img{
   }
 
 .android-customized-section-image {
-  background: url("/OficinaSocial/javax.faces.resource/devices.jpg.xhtml?ln=img") center top no-repeat;
+  background: url("/Naja/javax.faces.resource/devices.jpg.xhtml?ln=img") center top no-repeat;
   background-size: cover;
   height: 400px;
 }

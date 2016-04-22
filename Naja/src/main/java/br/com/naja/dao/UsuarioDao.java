@@ -10,7 +10,7 @@ import br.com.naja.model.Usuario;
 
 public class UsuarioDao {
 
-	@PersistenceContext(unitName = "OficinaSocial")
+	@PersistenceContext(unitName = "Naja")
 	private EntityManager entityManager;
 	
 	public Usuario getUsuarioPorEmailSenha(Usuario usuario) {
