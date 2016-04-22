@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "user_role")
+@Table(name = "users_roles")
 public class PerfilUsuario  implements Serializable {
 
 	private static final long serialVersionUID = 3277217181973046535L;
@@ -20,7 +20,7 @@ public class PerfilUsuario  implements Serializable {
 	@Column(name = "id_user")
 	private Integer idUsuario;
 	
-	@Column(name = "id_roles_permission")
+	@Column(name = "id_role")
 	private Integer idPerfil;
 
 	public PerfilUsuario() {

@@ -8,20 +8,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "roles_permission")
+@Table(name = "roles")
 public class Perfil  implements Serializable {
 
 	private static final long serialVersionUID = 3277217181973046535L;
 
 	@Id
-	@Column(name = "id_roles_permission")
+	@Column(name = "id_role")
 	private Integer idPerfil;
 	
-	@Column(name = "permission")
+	@Column(name = "role")
 	private String permissao;
 	
-	@Column(name = "roleName")
-	private String perfil;
+	@Column(name = "description")
+	private String descricao;
 
 	
 	public Perfil() {
@@ -49,13 +49,16 @@ public class Perfil  implements Serializable {
 	}
 
 
-	public String getPerfil() {
-		return perfil;
+	public String getDescricao() {
+		return descricao;
 	}
 
 
-	public void setPerfil(String perfil) {
-		this.perfil = perfil;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
+
+
+
 
 }
