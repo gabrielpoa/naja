@@ -5,7 +5,6 @@ createdb najadb
 
 psql najadb 
 
-
 Criando as tabelas no banco:
 
 CREATE  TABLE users (
@@ -33,3 +32,4 @@ CREATE TABLE users_roles (
 
 CREATE INDEX users_roles_idx_user ON users_roles (id_user);
 CREATE INDEX users_roles_idx_role ON users_roles (id_role);
+
