@@ -1,0 +1,35 @@
+Criando banco de dados
+**Atenção, fazer com o usuário postgres
+
+createdb najadb
+
+psql najadb 
+
+
+Criando as tabelas no banco:
+
+CREATE  TABLE users (
+  id_user serial NOT NULL,
+  username VARCHAR(200) NOT NULL ,
+  password VARCHAR(500) NOT NULL ,
+  email VARCHAR(200),
+  enabled INT NOT NULL DEFAULT 1 ,
+  PRIMARY KEY (id_user));	
+
+CREATE  TABLE roles (
+  id_role serial NOT NULL,
+  role VARCHAR(20) NOT NULL ,
+  description VARCHAR(45) NOT NULL ,
+  PRIMARY KEY (id_role));
+
+CREATE TABLE users_roles (
+  id_user_role serial not null,
+  id_user INT NOT NULL,
+  id_role INT NOT NULL,
+  PRIMARY KEY (id_user_role),
+  CONSTRAINT uni_user_role UNIQUE(id_user ,id_role),
+  CONSTRAINT fk_user_ct FOREIGN KEY (id_user) REFERENCES users (id_user),
+  CONSTRAINT fk_role_ct FOREIGN KEY (id_role) REFERENCES roles (id_role));
+
+CREATE INDEX users_roles_idx_user ON users_roles (id_user);
+CREATE INDEX users_roles_idx_role ON users_roles (id_role);
