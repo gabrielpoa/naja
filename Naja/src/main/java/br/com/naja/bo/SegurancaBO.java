@@ -31,7 +31,7 @@ public class SegurancaBO {
 			return (new Sessao(usuario.getEmail(), usuario.getNome(), this.getTokenLogin(usuario)));
 		}
 
-		return (new Sessao(usuario.getEmail(), "", "", new ErrorMessage(1, "Ops, E-mail ou Senha informados est„o incorretos.")));
+		return (new Sessao(usuario.getEmail(), "", "", new ErrorMessage(1, "Ops, E-mail ou Senha informados est√£o incorretos.")));
 	}	
 	
 	
